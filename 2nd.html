@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Home</title>
+  <link rel="stylesheet" href="style.css">
+<script>
+  	function logout(){
+  		let response = confirm("are you sure you want to logout ?");
+  		if (response){
+  			window.close('home.html')
+  			window.open('index.html')
+  		}
+    }
+    </script>
+    </head>
+<body>
+  <h1>Conditional Statement</h1>
+  <button type="submit" onclick="logout()"> Logout</button>
+  <br>
+
+  <div class="div1">
+    <br>
+    <h3> first number </h3>
+    <input type="number" id="num1">
+    <h3> second number</h3>
+    <input type="number" id="num2">
+    <button type= "button" onclick="walk()"> Add </button>
+
+    <img id="walk" src="img/pause.png">
+
+    <script>
+      function walk() {
+        var image = document.getElementById('walk');
+
+        let a = parseInt(document.getElementById("num1").value);
+        let b = parseInt(document.getElementById("num2").value);
+        let x = a + b;
+
+        if (x >= 100){
+          image.src ="img/walking.gif";
+        } else {
+          image.src ="img/pause.png";
+        }
+
+      }
+    </script>
+    
+    <p> <a href="home.html"> << Prev </a> </p>
+       
+    </div>
+ </body>
+</html>
